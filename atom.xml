@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://reinholdm.github.io/MengLinghui.github.io/</id>
     <title>Linghui&apos;s blog</title>
-    <updated>2020-03-17T07:33:50.806Z</updated>
+    <updated>2020-03-19T06:22:00.342Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://reinholdm.github.io/MengLinghui.github.io/"/>
     <link rel="self" href="https://reinholdm.github.io/MengLinghui.github.io/atom.xml"/>
@@ -10,6 +10,290 @@
     <logo>https://reinholdm.github.io/MengLinghui.github.io/images/avatar.png</logo>
     <icon>https://reinholdm.github.io/MengLinghui.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Linghui&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[Bash学习]]></title>
+        <id>https://reinholdm.github.io/MengLinghui.github.io/post/bash-xue-xi/</id>
+        <link href="https://reinholdm.github.io/MengLinghui.github.io/post/bash-xue-xi/">
+        </link>
+        <updated>2020-03-19T06:15:51.000Z</updated>
+        <content type="html"><![CDATA[<p><strong>shell基础</strong></p>
+<ol>
+<li>
+<p>在包含某个关键字的行上面插入一行文字，命令如下：</p>
+<p>sed -i '/hello/i\1234' testfile</p>
+<p>执行完命令后，会将i后面反斜杠后面的内容插入到包</p>
+<p>含hello关键字行的上面</p>
+</li>
+<li>
+<p>在包含某个关键字的行下面插入一行文字，命令如下：</p>
+<p>sed -i '/hello/a\4567' testfile</p>
+<p>执行完命令后，会将a后面反斜杠后面的内容插入到包含hello关键字行的下面</p>
+</li>
+<li>
+<p>在指定行插入数据</p>
+<p>sed '3 apassword' -i a.txt  在第三行后面添加 password   前面是ipassword</p>
+</li>
+<li>
+<p>IP=<code>ip a |grep brd |grep eno16777736 | awk '{print $2}' |awk -F '/' '{print $1}'</code><br>
+sed -i 's/remove/'$IP'/g' /home/mysql_install.sh</p>
+</li>
+<li>
+<p>sed -i '1d' name.txt 删除第一行<br>
+sed -i '<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>d</mi><mo mathvariant="normal">′</mo></msup><mi>n</mi><mi>a</mi><mi>m</mi><mi>e</mi><mi mathvariant="normal">.</mi><mi>t</mi><mi>x</mi><mi>t</mi><mi mathvariant="normal">删</mi><mi mathvariant="normal">除</mi><mi mathvariant="normal">最</mi><mi mathvariant="normal">后</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">行</mi><mi>s</mi><mi>e</mi><mi>d</mi><mo>−</mo><msup><mi>i</mi><mo mathvariant="normal">′</mo></msup><mn>1</mn><mo separator="true">,</mo></mrow><annotation encoding="application/x-tex">d&#x27; name.txt 删除最后一行
+  sed -i &#x27;1,</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.835222em;vertical-align:-0.08333em;"></span><span class="mord"><span class="mord mathdefault">d</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord mathdefault">n</span><span class="mord mathdefault">a</span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mord">.</span><span class="mord mathdefault">t</span><span class="mord mathdefault">x</span><span class="mord mathdefault">t</span><span class="mord cjk_fallback">删</span><span class="mord cjk_fallback">除</span><span class="mord cjk_fallback">最</span><span class="mord cjk_fallback">后</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">行</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault">d</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.946332em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">i</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord">1</span><span class="mpunct">,</span></span></span></span>d' name.txt 删除第一至最后一行<br>
+sed -i '^$' name.txt 删除空行<br>
+sed -i '/empty/' name.txt 删除包含empty的行</p>
+<p>sed -i 's/192/199/1' name.txt 替换匹配的第一个v<br>
+sed -i '/empty/r /etc/hosts' name.txt //r是匹配文件内容，在查找项目后匹配入文件<br>
+sed -i '/empty/ {n;s/name/NAME/g}' name.txt //对匹配项的下一行进行修改</p>
+</li>
+</ol>
+<p>处理变量</p>
+<p>比较两个文本的内容异同<br>
+找出不同点：<br>
+awk 'NR<mark>FNR{a[$0]++}NR&gt;FNR&amp;&amp;!a[$0]'  少.txt  多.txt<br>
+找出相同点：<br>
+awk 'NR</mark>FNR{a[$0]++}NR&gt;FNR&amp;&amp;a[$0]'  多.txt  少.txt<br>
+删除带有特殊字符的行<br>
+：g/***/d</p>
+<p>生成随机数<br>
+aa=$((RANDOM%99999))                //最大是五位数</p>
+<p>比较两个文件中，某固定位置是否相同</p>
+<hr>
+<p>sed -n '1,4p' 1.txt &gt;a.tmp<br>
+sed -n '1,3p' 2.txt &gt;b.tmp<br>
+diff a.tmp b.tmp &gt;diff.tmp</p>
+<p>for i in $(cat b.txt); do<br>
+for j in $(cat a.txt); do<br>
+if [ $j -eq $i ]<br>
+then<br>
+echo $i<br>
+fi<br>
+done<br>
+done</p>
+<p>####提取文件特征值####用作参考文件配置是否替换<br>
+filename=<code>find /u01/*/engine/workdir/ -name Pattek.lic</code><br>
+for i in $filename<br>
+do<br>
+md5sum $i<br>
+done<br>
+echo &quot;finish&quot;</p>
+<p>vim  :6000               跳转到6000行<br>
+vim 中ctrl+v 列编辑模式，编辑起来特别方便  选中后按x键删除<br>
+建立用户到指定目录下：useradd -d /usr/local/dyh dyh</p>
+<p>grep -i &quot;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mi>i</mi><mi>l</mi><mi>e</mi><mi mathvariant="normal">&quot;</mi><mn>1.</mn><mi>t</mi><mi>x</mi><mi>t</mi><mi mathvariant="normal">∣</mi><mi>g</mi><mi>r</mi><mi>e</mi><mi>p</mi><mo>−</mo><mi>v</mi><mo>−</mo><mi>e</mi><mi mathvariant="normal">&quot;</mi><mo>−</mo><mo>−</mo><mi mathvariant="normal">&quot;</mi><mo>&gt;</mo><mo>&gt;</mo><mi>n</mi><mi>e</mi><mi>w</mi><mn>2.</mn><mi>t</mi><mi>x</mi><mi>t</mi><mi mathvariant="normal">/</mi><mi mathvariant="normal">/</mi><mi mathvariant="normal">查</mi><mi mathvariant="normal">找</mi><mn>1</mn><mi mathvariant="normal">文</mi><mi mathvariant="normal">件</mi><mi mathvariant="normal">中</mi><mi mathvariant="normal">存</mi><mi mathvariant="normal">在</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">称</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">并</mi><mi mathvariant="normal">赋</mi><mi mathvariant="normal">给</mi><mi mathvariant="normal">新</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">件</mi><mi mathvariant="normal">中</mi><mi>g</mi><mi>r</mi><mi>e</mi><mi>p</mi><mo>−</mo><mi>i</mi><mi mathvariant="normal">&quot;</mi></mrow><annotation encoding="application/x-tex">file&quot; 1.txt | grep -v  -e  &quot;--&quot; &gt;&gt;new2.txt  //查找1文件中存在的名称，并赋给新文件中
+grep -i &quot;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord">&quot;</span><span class="mord">1</span><span class="mord">.</span><span class="mord mathdefault">t</span><span class="mord mathdefault">x</span><span class="mord mathdefault">t</span><span class="mord">∣</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">p</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">e</span><span class="mord">&quot;</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord">&quot;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">n</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord">2</span><span class="mord">.</span><span class="mord mathdefault">t</span><span class="mord mathdefault">x</span><span class="mord mathdefault">t</span><span class="mord">/</span><span class="mord">/</span><span class="mord cjk_fallback">查</span><span class="mord cjk_fallback">找</span><span class="mord">1</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">中</span><span class="mord cjk_fallback">存</span><span class="mord cjk_fallback">在</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">称</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">并</span><span class="mord cjk_fallback">赋</span><span class="mord cjk_fallback">给</span><span class="mord cjk_fallback">新</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">中</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">p</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">i</span><span class="mord">&quot;</span></span></span></span>file&quot; 1.txt | grep -v  -e  &quot;--&quot; &gt;&gt;new2.txt //查找文件以及其下面一个文件<br>
+grep -A 10 &quot;soucename&quot;  1.txt //检索出1.txt文件中目标及其后续十行</p>
+<hr>
+<p>6、AWK<br>
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1642/sshd     //实例<br>
+netstat -lntp |grep sshd |awk '{print NF}'  //统计有几列     7<br>
+netstat -lntp |grep sshd |awk '{print $NF}'  //打印最后一列   1642/sshd<br>
+netstat -lntp |grep sshd |awk '{print <span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;}&#039; at position 7: (NF-1)}̲&#039;  //倒数第二列    L…'>(NF-1)}&#039;  //倒数第二列    LISTEN 
+netstat -lntp |grep sshd |awk &#039;{print substr(</span>NF,6)}' //substr函数匹配字符串  输出结果  sshd<br>
+cat 1.txt | awk '/^\s*$/{print NR}'          //打印空的行号      33332<br>
+cat 1.txt | grep -n ''''                              //给文本内容加行号</p>
+<p>shell中的小数的乘法<br>
+dd=<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>e</mi><mi>c</mi><mi>h</mi><mi>o</mi><mi mathvariant="normal">&quot;</mi><mi>s</mi><mi>c</mi><mi>a</mi><mi>l</mi><mi>e</mi><mo>=</mo><mn>2</mn><mo separator="true">;</mo><mn>1000</mn><mo>∗</mo></mrow><annotation encoding="application/x-tex">(echo &quot;scale=2;1000*</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">e</span><span class="mord mathdefault">c</span><span class="mord mathdefault">h</span><span class="mord mathdefault">o</span><span class="mord">&quot;</span><span class="mord mathdefault">s</span><span class="mord mathdefault">c</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8388800000000001em;vertical-align:-0.19444em;"></span><span class="mord">2</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mord">∗</span></span></span></span>aa&quot;|bc)<br>
+echo &quot;7.88*1999&quot; |bc</p>
+<p>windows文本文件传至Linux中时，由于编码问题提示xxx.txt下内容的\r的文件状态（stat)<br>
+vim -b xxx.txt<br>
+:%s/\r//g<br>
+替换即可</p>
+<p>检测文件更新<br>
+a=<code>stat -c %Y filename</code>;//检测文件最新更新时间<br>
+b=<code>date +%s</code>;              //系统时间<br>
+if [ $[ $b - $a ] -gt 60 ];<br>
+then command;<br>
+else :;<br>
+fi</p>
+<p>split 分割大文件<br>
+split -b 3000m 33.tar.gz 01_33.tar.gz  //每3G分割一次<br>
+cat * &gt; 33.tar.gz  //合并</p>
+<p>时间格式转换<br>
+/finddate -d '2013-2-22 22:14' +%s //转为uinx时间戳<br>
+date -d @1361542596 +&quot;%Y-%m-%d %H:%M:%S&quot;</p>
+<p>路由的添加<br>
+route -n  //查看路由表<br>
+route add default gw 192.168.1.100<br>
+route del default gw 192.168.1.100</p>
+<p>lsof -i:22 //查看端口信息<br>
+let<br>
+V1=1<br>
+V2=2<br>
+let V3=<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>V</mi><mn>1</mn><mo>+</mo></mrow><annotation encoding="application/x-tex">V1+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.76666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mord">1</span><span class="mord">+</span></span></span></span>V2<br>
+echo $V3</p>
+<p>find / -name <em>.sh -type f -mtime +7 exec rm -rf {} ;<br>
+find / -name name</em> -type f -mtime +30 |xargs rm -rf<br>
+意思是查找            -type f find命令查找的普通文件</p>
+<p>A=<code>ther</code> --`赋值意思，将ther赋值给A</p>
+<p>if [[ $string == abc* ]];then检查字符串是否以abc开头</p>
+<ol>
+<li>如果给定字符串 variable=&quot;User:123:321:/home/dir&quot;，如何只用 echo 命令获取 home_dir ?</li>
+</ol>
+<p>echo ${variable#<em>:</em>😗:}</p>
+<p>或</p>
+<p>echo ${variable##*:}</p>
+<p>[ $a == $b ] - 用于字符串比较<br>
+[ $a -eq $b ] - 用于数字比较</p>
+<ol start="33">
+<li>如何从上面的字符串中获取 “User” ?</li>
+</ol>
+<p>echo ${variable%:<em>:</em>😗}</p>
+<p>sed命令<br>
+sed -i '3d' 001.txt    --删除001.txt文件中第3行内容<br>
+sed -i '128s#/uinnova/tarsier/#/uinnova/#g' 001.txt --将001.txt文件中的128行的路径替换</p>
+<p>$? 上个命令的退出状态，或函数的返回值。<br>
+例子1 :<br>
+ls 命令没有找到匹配的结果. 所以返回2 $? 就是2<br>
+[root@sg-rhel6-17 etc]# ls /tmp/<em>.log<br>
+ls: cannot access /tmp/</em>.log: No such file or directory<br>
+[root@sg-rhel6-17 etc]# echo <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>?</mo><mn>2</mn><mi mathvariant="normal">例</mi><mi mathvariant="normal">子</mi><mn>2</mn><mo>:</mo><mi>l</mi><mi>s</mi><mi mathvariant="normal">命</mi><mi mathvariant="normal">令</mi><mi mathvariant="normal">找</mi><mi mathvariant="normal">到</mi><mi mathvariant="normal">了</mi><mi mathvariant="normal">结</mi><mi mathvariant="normal">果</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">成</mi><mi mathvariant="normal">功</mi><mi mathvariant="normal">返</mi><mi mathvariant="normal">回</mi><mn>0</mn><mi mathvariant="normal">所</mi><mi mathvariant="normal">以</mi></mrow><annotation encoding="application/x-tex">?
+2
+例子2 :
+ls 命令找到了结果. 成功返回0 所以</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mclose">?</span><span class="mord">2</span><span class="mord cjk_fallback">例</span><span class="mord cjk_fallback">子</span><span class="mord">2</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">s</span><span class="mord cjk_fallback">命</span><span class="mord cjk_fallback">令</span><span class="mord cjk_fallback">找</span><span class="mord cjk_fallback">到</span><span class="mord cjk_fallback">了</span><span class="mord cjk_fallback">结</span><span class="mord cjk_fallback">果</span><span class="mord">.</span><span class="mord cjk_fallback">成</span><span class="mord cjk_fallback">功</span><span class="mord cjk_fallback">返</span><span class="mord cjk_fallback">回</span><span class="mord">0</span><span class="mord cjk_fallback">所</span><span class="mord cjk_fallback">以</span></span></span></span>? 就是0<br>
+[root@sg-rhel6-17 etc]# ls /tmp/*.tmp<br>
+/tmp/reminder.tmp<br>
+[root@sg-rhel6-17 etc]# echo $?<br>
+0</p>
+<p>alias cls=‘clear’设定命令指向<br>
+export cls 将cls命令导入至变量环境</p>
+<p>env 查看系统变量</p>
+<p>which mv 查看mv命令所在目录</p>
+<p>vim /etc/profile  创建开机重载入   并以source执行刷新<br>
+echo &quot;welcome to beijing&quot;##登录显示信息</p>
+<p>curl -o /dev/null -s -w %{http_code} www.linux.com  检查网页访问返回值</p>
+<p>****mysql启动正常与否的shell检测<br>
+#!/bin/bash<br>
+mysqlpath=<code>pwd</code><br>
+nohup ./bin/mysqld_safe --defaults-file=$mysqlpath/my.cnf&gt;/dev/null 2&gt;&amp;1 &amp;</p>
+<p>sleep 2                                                                含有grep的不输出   awk 执行当前文本中每一行的｛｝里面的语句<br>
+pid_list=<code>ps -ef| grep &quot;$mysqlpath/bin/mysqld&quot; | grep -v grep | awk '{print $2}'</code></p>
+<pre><code>    -n &quot;$pid_list&quot;含有字符串时
+    -e filename 存在文件
+    -d &quot;$pid_list&quot; 存在目录
+    -z  &quot;$pid_list&quot;[ -z STRING ] “STRING” 的长度为零则为真。
+    -f  filename 常规文件
+</code></pre>
+<p>if [ ! -n &quot;$pid_list&quot; ];then<br>
+echo &quot;mysql start failed!&quot;<br>
+else<br>
+cd bin<br>
+echo &quot;mysql start successfully!&quot;<br>
+fi</p>
+<p>echo -n 不换行输出<br>
+-e 遇到特殊字符。特殊处理<br>
+如：\f 换行但光标仍然停留在原来的位置<br>
+\r 不换行，光标移动至行首</p>
+<p>1、touch hello.sh<br>
+vim hello.sh<br>
+#!/bin/bash<br>
+echo hello word!  等同于 echo &quot;hello word!&quot;</p>
+<p>2、‘’不能解析变量；“”能解析变量；</p>
+<p>3、整型测试<br>
+-gt:大于<br>
+-lt:小于<br>
+-ge:大于等于<br>
+-le:小于等于<br>
+-eq:等于<br>
+-ne:不等于</p>
+<p>字符串测试：<br>
+-z $xxx 判断xxx是否为空</p>
+<p>4、 if语句<br>
+#!/bin/bash<br>
+a=1<br>
+db=2<br>
+if [(此处空格） a -gt b (此处空格）]<br>
+ds    then<br>
+echo a large than b<br>
+else<br>
+echo a lower than b<br>
+fi</p>
+<p>5、多分支if<br>
+if[ 条件1 ]<br>
+then<br>
+echo xxx<br>
+elif [ 条件2 ]<br>
+then<br>
+echo aaa<br>
+else<br>
+echo bbb<br>
+fi</p>
+<p>6、case 语句<br>
+#!/bin/bash<br>
+read -p &quot;press a key:&quot; key<br>
+case $key in<br>
+[a-z]|[A-Z])<br>
+echo &quot;it's a character&quot;<br>
+;;<br>
+[0-9])<br>
+echo &quot;it's a number&quot;<br>
+;;<br>
+*)<br>
+echo &quot;others&quot;<br>
+esac</p>
+<p>7、算数运算<br>
+#!/bin/bash<br>
+num=1<br>
+let num=<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mi>u</mi><mi>m</mi><mo>+</mo><mn>1</mn><mi>n</mi><mi>u</mi><mi>m</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">num+1
+num=</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">n</span><span class="mord mathdefault">u</span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">1</span><span class="mord mathdefault">n</span><span class="mord mathdefault">u</span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span>[<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>n</mi><mi>u</mi><mi>m</mi><mo>+</mo><mn>1</mn><mo>]</mo><mi>n</mi><mi>u</mi><mi>m</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">num+1]
+num=</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">n</span><span class="mord mathdefault">u</span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">]</span><span class="mord mathdefault">n</span><span class="mord mathdefault">u</span><span class="mord mathdefault">m</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span>(($num+1))<br>
+num=<code>expr $num + 1</code><br>
+echo $num</p>
+<p>8、逻辑运算符<br>
+-a 代表'与'&amp;&amp;<br>
+-o 代表'或'<br>
+! 非</p>
+<p>if [$a -lt $b -a $c -gt $b ]</p>
+<p>9、自定义函数<br>
+functiom func(){<br>
+echo this is a function<br>
+}<br>
+func</p>
+<p>10、read<br>
+read -p &quot;press enter:&quot; xxx            -p 输入提示命令<br>
+read -s -p &quot;press password:&quot; xxx   安全输入：输入密码时不显示</p>
+<p>11、date<br>
+显示当前时间<br>
+date '+%Y-%m-%d %H:%M:%S'<br>
+echo <code>date +%Y-%m-&amp;d-%H:%M:%S</code>    2018-08-24-20:09:00<br>
+指定时间输出<br>
+echo <code>date --date='2019-01-01 11:11:11'</code><br>
+echo <code>date --date='3 days ago'</code>显示三天前时间</p>
+<p>12、后台运行脚本<br>
+tesh.sh &amp;         后台运行<br>
+nohup test.sh &amp;   不挂断运行命令</p>
+<p>13、标准输入、输出、错误、重定向<br>
+ls &gt; /home/<br>
+ls 2 &gt; /home/ 错误输出</p>
+<p>14、函数调用</p>
+<p>#/bin/bash</p>
+<p>#write</p>
+<p>function echo_green(){</p>
+<pre><code>       echo -e -n &quot;\033[36m $1 \033[0m&quot;
+       sleep 5
+</code></pre>
+<p>}<br>
+echo_green &quot;是否一键修改cupid-server中project.properties?(y/n)&quot;</p>
+<p>read answer</p>
+<p>if [ $answer == &quot;y&quot; ];<br>
+then</p>
+<pre><code>      sed -i '15s/then/them/g' /home/uinnova/read.sh
+</code></pre>
+<p>echo_green &quot;请输入IP;&quot;<br>
+read -p &quot;请输入IP:&quot; varip echo <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>v</mi><mi>a</mi><mi>r</mi><mi>i</mi><mi>p</mi><mi>s</mi><mi>e</mi><mi>d</mi><mo>−</mo><msup><mi>i</mi><mo mathvariant="normal">′</mo></msup><mn>3</mn><mi>s</mi><mi mathvariant="normal">/</mi><mi>w</mi><mi>r</mi><mi>i</mi><mi>t</mi><mi>e</mi><mi mathvariant="normal">/</mi></mrow><annotation encoding="application/x-tex">varip
+     sed -i &#x27;3s/write/</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">i</span><span class="mord mathdefault">p</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault">d</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.001892em;vertical-align:-0.25em;"></span><span class="mord"><span class="mord mathdefault">i</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.751892em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">′</span></span></span></span></span></span></span></span></span><span class="mord">3</span><span class="mord mathdefault">s</span><span class="mord">/</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord">/</span></span></span></span>varip/g' /home/uinnova/read.sh<br>
+if [ $? -eq 0 ]<br>
+then<br>
+echo -e &quot;修改IP成功&quot;<br>
+else<br>
+echo -e &quot;修改IP失败&quot;<br>
+fi</p>
+<p>else<br>
+echo -e &quot;修改配置文件失败&quot;<br>
+fi</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[ Label Smoothing 机制详解]]></title>
         <id>https://reinholdm.github.io/MengLinghui.github.io/post/label-smoothing-ji-zhi-xiang-jie/</id>
