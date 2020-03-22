@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://reinholdm.github.io/MengLinghui.github.io/</id>
     <title>Linghui&apos;s blog</title>
-    <updated>2020-03-19T06:22:00.342Z</updated>
+    <updated>2020-03-22T13:14:22.905Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://reinholdm.github.io/MengLinghui.github.io/"/>
     <link rel="self" href="https://reinholdm.github.io/MengLinghui.github.io/atom.xml"/>
@@ -10,6 +10,316 @@
     <logo>https://reinholdm.github.io/MengLinghui.github.io/images/avatar.png</logo>
     <icon>https://reinholdm.github.io/MengLinghui.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Linghui&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[ICASSP 2020 Papers about Speech]]></title>
+        <id>https://reinholdm.github.io/MengLinghui.github.io/post/icassp-2020-papers-about-speech/</id>
+        <link href="https://reinholdm.github.io/MengLinghui.github.io/post/icassp-2020-papers-about-speech/">
+        </link>
+        <updated>2020-03-22T13:11:55.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="icassp-2020-paper-category">ICASSP 2020 paper category</h2>
+<table>
+<thead>
+<tr>
+<th>Papers</th>
+<th style="text-align:center">Topic</th>
+<th>idea</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cross lingual transfer learning for zero-resource domain adaptation</td>
+<td style="text-align:center">e2e Acoustic Modeling</td>
+<td><strong>Share  several DNN layers between multi-lingual in acoustic modeling, transfer learning</strong></td>
+</tr>
+<tr>
+<td>Deja-vu: Double Feature Presentation and Iterated Loss in Deep Transformer Networks</td>
+<td style="text-align:center">***</td>
+<td><strong>Input features re-use with attention, A new objective function each layer</strong></td>
+</tr>
+<tr>
+<td>FRAME-LEVEL MMI AS A SEQUENCE DISCRIMINATIVE TRAINING CRITERION FOR LVCSR</td>
+<td style="text-align:center">***</td>
+<td><strong>frame-level MMI robustness, evaluation criterion don't care about frame-wise decision, sequence discriminative learning</strong></td>
+</tr>
+<tr>
+<td>Fully Learnable Front-End for Multi-Channel Acoustic Modeling using Semi-Supervised Learning</td>
+<td style="text-align:center">***</td>
+<td><strong>Teacher-student training semi-supervised, pre-training,  TS used to train spatial filter and front end feature extraction, Multi-channel, knowledge ditillation</strong></td>
+</tr>
+<tr>
+<td>G2G: TTS-Driven Pronunciation Learning for Graphemic Hybrid ASR</td>
+<td style="text-align:center">***</td>
+<td><strong>With G2G tts to generate alternative pronunciation to improve ASR proper noun recognition (Grapheme level)</strong></td>
+</tr>
+<tr>
+<td>Robust Multi-channel Speech Recognition using Frequency Aligned Network</td>
+<td style="text-align:center">***</td>
+<td><strong>Training spatial filtering layer jointly within an acoustic model, frequency aligned network to prevent one frequency bin influencing others for more robust, Multi-channel</strong></td>
+</tr>
+<tr>
+<td>SNDCNN: Self-normalizing deep CNNs with scaled exponential linear units for speech recognition</td>
+<td style="text-align:center">***</td>
+<td><strong>self-normalizing CNNs with SELU, removing SC/BN, Accelerate inference progress</strong></td>
+</tr>
+<tr>
+<td>SpecAugment on Large Scale Datasets</td>
+<td style="text-align:center">***</td>
+<td><strong>Demonstrate why SpecAugment work, Time mask size depends on the length of utterance</strong></td>
+</tr>
+<tr>
+<td>Transformer-based Acoustic Modeling for Hybrid Speech Recognition</td>
+<td style="text-align:center">***</td>
+<td><strong>evaluate transformer-based acoustic models (AM) for hybrid speech recognition</strong></td>
+</tr>
+<tr>
+<td>Unsupervised Pre-training of Bidirectional Speech Encoders via Masked Reconstruction</td>
+<td style="text-align:center">***</td>
+<td><strong>Masked reconstruction loss, pre-training encoder for AM on a much larger amount of unlabeled data than th labeled data, domain adaption</strong></td>
+</tr>
+<tr>
+<td>A COMPREHENSIVE STUDY OF RESIDUAL CNNS FOR ACOUSTIC MODELING IN ASR</td>
+<td style="text-align:center">e2e Acoustic Modeling</td>
+<td><strong>Residual CNNs for LVSR to allow online streaming, SpecAugment to overcome overfitting</strong></td>
+</tr>
+<tr>
+<td>CGCNN: Complex Gabor Convolutional Neural Network on raw speech</td>
+<td style="text-align:center">***</td>
+<td><strong>Complex Gabor filter to replace usual CNN's filter in coplex neural network to represent acoustic features rather than handcraft, take advantage of time-frequencey resolution and complex domain</strong></td>
+</tr>
+<tr>
+<td>DFSMN-SAN with Persistent Memory Model for Automatic Speech Recognition</td>
+<td style="text-align:center">***</td>
+<td><strong>Deep feed-forward sequential memory network with self-attention (DFSM-SAN) outperforms vanilla self attention network, Memory mechanism</strong></td>
+</tr>
+<tr>
+<td>Effectiveness of self-supervised pre-training for speech recognition</td>
+<td style="text-align:center">***</td>
+<td><strong>fine-tuned pre-trained BERT models using CTC, 10h labeled data with a vq-wav2vec vocabulary as good as 100h labeled data</strong></td>
+</tr>
+<tr>
+<td>Improving sequence-to-sequence speech recognition training with on-the-fly data augmentation</td>
+<td style="text-align:center">***</td>
+<td><strong>Time perturation in the frequency domain and sub-sequence sampling  augmentation for S2S ASR training</strong></td>
+</tr>
+<tr>
+<td>LAYER-NORMALIZED LSTM FOR HYBRID-HMM AND END-TO-END ASR</td>
+<td style="text-align:center">***</td>
+<td><strong>Layer-normalized used in different parts of a LSTM for hybrid and e2e ASR</strong></td>
+</tr>
+<tr>
+<td>Libri-Light: A Benchmark for ASR with Limited or No Supervision</td>
+<td style="text-align:center">***</td>
+<td><strong>A new collection of spoken English audio suitable for training speech recognition systems under limited or no supervision, 60k hours largest corpus of speech</strong></td>
+</tr>
+<tr>
+<td>Small energy masking for improved neural network training for end-to-end speech recognition</td>
+<td style="text-align:center">***</td>
+<td><strong>a time-frequency bin is masked if fbank energy in this bin is less than a certain threshhold generated from a uniform distribution, Improve WER in Librispeech relatively 11.2%/13.5%</strong></td>
+</tr>
+<tr>
+<td>Attention-based ASR with Lightweight and Dynamic Convolutions</td>
+<td style="text-align:center">e2e asr General topics</td>
+<td><strong>lightweight and dynamic convolution as an alternative architecture to self-attention to make computational order linear, CTC jointly training</strong></td>
+</tr>
+<tr>
+<td>Correction of Automatic Speech Recognition with Transformer Sequence-to-sequence Model</td>
+<td style="text-align:center">***</td>
+<td><strong>Transformer used in ASR's output to be grammatical and semantical, ASR correction model, data augmentation and pretrain, outperform 6-gram LM rescoring and rescore with Transformer XL LM WER</strong></td>
+</tr>
+<tr>
+<td>Generating Synthetic Audio Data for Attention-Based Speech Recognition Systems</td>
+<td style="text-align:center">***SP</td>
+<td><strong>TTS trained on ASR corpora used to generate audio to extend SOTA ASR, text only is useful, outperform low-resource Libri-speech 100h 33% relative improvements</strong></td>
+</tr>
+<tr>
+<td>Independent language modeling architecture for end-to-end ASR</td>
+<td style="text-align:center">***SP</td>
+<td><strong>Seperate decoder from encoder output to be a independent LM trained on external text data, could be used on low-resource asr</strong></td>
+</tr>
+<tr>
+<td>Self-Training for End-to-End Speech Recognition</td>
+<td style="text-align:center">***</td>
+<td><strong>demonstrate that training with pseudo-labels can substantially improve the accuracy of a baseline model, ensemble for diversity,  semi-supervised, results outperform</strong></td>
+</tr>
+<tr>
+<td>End-to-End Multi-speaker Speech Recognition with Transformer</td>
+<td style="text-align:center">New Models</td>
+<td><strong>Transformer used in multi-speaker and multi-channel asr, self-attention restrict within one segment, results outperform</strong></td>
+</tr>
+<tr>
+<td>JOINT PHONEME-GRAPHEME MODEL FOR END-TO-END SPEECH RECOGNITION</td>
+<td style="text-align:center">***SP</td>
+<td><strong>Sharing encoder layers in signal-phoneme and signal-grapheme, multi-task learning, joint model based on iterative refinement</strong></td>
+</tr>
+<tr>
+<td>LIGHTWEIGHT AND EFFICIENT END-TO-END SPEECH RECOGNITION USING LOW-RANK TRANSFORMER</td>
+<td style="text-align:center">***</td>
+<td><strong>Low-rank transformer, reduce params number, boost the speed of training and ineference</strong></td>
+</tr>
+<tr>
+<td>QuartzNet: Deep Automatic Speech Recognition with 1D Time-Channel Separable Convolutions</td>
+<td style="text-align:center">***</td>
+<td><strong>Acoustic Modeling, Block: 1-d time channel convolution, BN, ReLU, can be effectively finetue on new datasets</strong></td>
+</tr>
+<tr>
+<td>A practical two-stage training strategy for multi-stream end-to-end speech recognition</td>
+<td style="text-align:center">Robust Speech Recognition</td>
+<td><strong>universal feature extractor (UFE) in a single-stream and pre-trained for multi-stream</strong></td>
+</tr>
+<tr>
+<td>Audio-visual Recognition of Overlapped speech for the LRS2 dataset</td>
+<td style="text-align:center">***</td>
+<td><strong>oberlapped speech, audio-visual, LF-MMI to ignore a speech seperation and recognition</strong></td>
+</tr>
+<tr>
+<td>End-to-End Automatic Speech Recognition Integrated With CTC-Based Voice Activity Detection</td>
+<td style="text-align:center">***</td>
+<td><strong>VAD in attention based online and CTC, Blank label used to indentify no-speech region, espnet</strong></td>
+</tr>
+<tr>
+<td>End-to-end training of time domain audio separation and recognition</td>
+<td style="text-align:center">***</td>
+<td><strong>single channel multi-speaker separation, Convolutional Time domain Audio Separation Network (Conv-TasNet) with an E2E speech recognizer</strong></td>
+</tr>
+<tr>
+<td>Improving noise robust automatic speech recognition with single-channel time-domain enhancement network</td>
+<td style="text-align:center">***</td>
+<td><strong>Speech enhancement (SE), a single-channel time denoising</strong></td>
+</tr>
+<tr>
+<td>Improving Reverberant Speech Training Using Diffuse Acoustic Simulation</td>
+<td style="text-align:center">***</td>
+<td><strong>Reverberant speech simulation to augment asr task in classical NN</strong></td>
+</tr>
+<tr>
+<td>Low-frequency Compensated Synthetic Impulse Responses for Improved Far-field Speech Recognition</td>
+<td style="text-align:center">***</td>
+<td><strong>generate low-frequency compensated synthetic impulse responses that improve far-field speech recognition</strong></td>
+</tr>
+<tr>
+<td>Multi-scale Octave Convolutions for Robust Speech Recognition</td>
+<td style="text-align:center">***</td>
+<td><strong>a multi-scale octave convolutional layer to robust speech representation, enlarge receptive field, low-pass</strong></td>
+</tr>
+<tr>
+<td>Multi-task self-supervised learning for Robust Speech Recognition</td>
+<td style="text-align:center">***SP</td>
+<td><strong>self-supervised, PASE, convolution, integrate RNN and CNN, multi-distortion</strong></td>
+</tr>
+<tr>
+<td>A comparative study of estimating articulatory movements from phoneme sequences and acoustic features</td>
+<td style="text-align:center">Speech Production</td>
+<td><strong>attention and BLSTM comparative used in articulators estimation in different modeling level using linguistic information</strong></td>
+</tr>
+<tr>
+<td>Speech-Based Parameter Estimation of an Asymmetric Vocal Fold Oscillation Model and Its Application in Discriminating Vocal Fold Pathologies</td>
+<td style="text-align:center">***</td>
+<td><strong>vocal fold oscillation, unknown</strong></td>
+</tr>
+<tr>
+<td>ATTENTION-BASED GATED SCALING ADAPTATIVE ACOUSTIC MODEL FOR CTC- BASED SPEECH RECOGNITION</td>
+<td style="text-align:center">Speech Recognition Adaption</td>
+<td><strong>AGS attentioin based gated scaling, scaling gated matrix generate from lower layer with attention, CTC</strong></td>
+</tr>
+<tr>
+<td>Unsupervised pretraining transfers well across languages</td>
+<td style="text-align:center">***SP</td>
+<td><strong>CPC contrastive predictive coding algorithm unsupervised pretraining extract features across language</strong></td>
+</tr>
+<tr>
+<td>Unsupervised Speaker Adaptation using Attention-based Speaker Memory for End-to-End ASR</td>
+<td style="text-align:center">***</td>
+<td><strong>unsupervised speaker adaptation, unknown</strong></td>
+</tr>
+<tr>
+<td>Confidence Estimation for Black Box Automatic Speech Recognition Systems Using Lattice Recurrent Neural Networks</td>
+<td style="text-align:center">Speech Recognition Confidence, Errors and OOVs</td>
+<td><strong>BLSTM used to assess confidence of ASR output in word and sub-word level, lattice rnn improve sub-word level</strong></td>
+</tr>
+<tr>
+<td>Joint Contextual Modeling for ASR Correction and Language Understanding</td>
+<td style="text-align:center">***SP</td>
+<td><strong>SLM in task specific and fine-tune GPT LM to re-rank the n-best ASR hypotheses, joint ASR output error corection and LU model, small amount in domain data to train</strong></td>
+</tr>
+<tr>
+<td>On Modeling ASR Word Confidence</td>
+<td style="text-align:center">***</td>
+<td>**Herogrneous Word Confusion Network HWCN modeling word confidence and a score calibration using comparision from different models, BiRNN lattice **</td>
+</tr>
+<tr>
+<td>EXPLORING A ZERO-ORDER DIRECT HMM BASED ON LATENT ATTENTION FOR AUTOMATIC SPEECH RECOGNITION</td>
+<td style="text-align:center">Speech Recognition General Topics</td>
+<td><strong>Incorporate HMM and Transformer or LSTM to obtain explicit alignment with ease of end-to-end</strong></td>
+</tr>
+<tr>
+<td>GPU-Accelerated Viterbi Exact Lattice Decoder for Batched Online and Offline Speech Recognition</td>
+<td style="text-align:center">***</td>
+<td><strong>WFST decoding paradigm using in GPU and a novel Viterbi algorithm</strong></td>
+</tr>
+<tr>
+<td>Learning To Detect Keyword Parts And Whole By Smoothed Max Pooling</td>
+<td style="text-align:center">***</td>
+<td><strong>Smoothed maxpooling loss to detect keyword part and keyword, semi-unsupervised, on-device learning</strong></td>
+</tr>
+<tr>
+<td>Meta Learning for End-to-End Low-Resource Speech Recognition</td>
+<td style="text-align:center">***</td>
+<td><strong>MAML for low-resource language and ASR</strong></td>
+</tr>
+<tr>
+<td>Sequence-to-sequence Automatic Speech Recognition with Word Embedding Regularization and Fused Decoding</td>
+<td style="text-align:center">***</td>
+<td><strong>Word-embedding for decoder's output regularization to maximize cosine similar , A new fused decoding machanism to take advantage of transformer decoder,</strong></td>
+</tr>
+<tr>
+<td>Synchronous Transformers for End-to-End Speech Recognition</td>
+<td style="text-align:center">***</td>
+<td><strong>The decoder of transformer predict output conditioned from encoder chunk by chunk rahter than the whole input features to solve the online asr, forward-backward algorithm to optimize during training</strong></td>
+</tr>
+<tr>
+<td>Training ASR models by Generation of Contextual Information</td>
+<td style="text-align:center">***</td>
+<td><strong>evaluate the effectiveness of weak-supervised asr by loosely related contextual information</strong></td>
+</tr>
+<tr>
+<td>Deep Contextualized Acoustic Representations For Semi-Supervised Speech Recognition</td>
+<td style="text-align:center">Speech Recognition Representations and Embeddings</td>
+<td><strong>Representation learning by reconstruct present temprol slice from fbank in further and past context frames on unlabeled data, used in training amall amount labeled CTC end-to-end asr, semi-supervised</strong></td>
+</tr>
+<tr>
+<td>Mockingjay: Unsupervised Speech Representation Learning with Deep Bidirectional Transformer Encoders</td>
+<td style="text-align:center">***</td>
+<td><strong>Pretraining Bi-deirection transformer encoder in a large amount of unlabeled data and decoder is conditioned on jointly further and past frames</strong></td>
+</tr>
+<tr>
+<td>Multilingual acoustic word embedding models for processing zero-resource languages</td>
+<td style="text-align:center">***</td>
+<td><strong>embedding by autoencoder and discriminative classifier on a well-resource language and used in zero source language</strong></td>
+</tr>
+<tr>
+<td>What does a network layer hear? Analyzing hidden representations of end-to-end ASR through speech synthesis</td>
+<td style="text-align:center">***</td>
+<td><strong>Probing models which sythesis speech from the hidden features of end-to-end asr to examine what have listen in a ASR layer</strong></td>
+</tr>
+<tr>
+<td>CIF: Continuous Integrate-and-Fire for End-to-End Speech Recognition</td>
+<td style="text-align:center">***</td>
+<td><strong>Determine acoustic segment by a CIF mechanism with self attention alignment (SAA) in chunk hop for streaming ASR</strong></td>
+</tr>
+<tr>
+<td>Streaming automatic speech recognition with the transformer model</td>
+<td style="text-align:center">***</td>
+<td><strong>time-restricted self-attention and triggered transformer to achieve streaming asr used in transformer, SOTA in LibriSpeech</strong></td>
+</tr>
+<tr>
+<td>TRANSFORMER-BASED ONLINE CTC/ATTENTION END-TO-END SPEECH RECOGNITION ARCHITECTURE</td>
+<td style="text-align:center">***</td>
+<td><strong>using self-attention aligner</strong></td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[Bash学习]]></title>
         <id>https://reinholdm.github.io/MengLinghui.github.io/post/bash-xue-xi/</id>
