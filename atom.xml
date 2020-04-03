@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://reinholdm.github.io/MengLinghui.github.io/</id>
     <title>Linghui&apos;s blog</title>
-    <updated>2020-04-03T13:54:49.875Z</updated>
+    <updated>2020-04-03T14:06:01.348Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://reinholdm.github.io/MengLinghui.github.io/"/>
     <link rel="self" href="https://reinholdm.github.io/MengLinghui.github.io/atom.xml"/>
@@ -48,8 +48,13 @@ plt.scatter(X_pca[:, 0], X_pca[:, 1], c=digits.target,label=&quot;PCA&quot;)
 plt.legend()
 plt.savefig('images/digits_tsne-pca.png', dpi=120)
 plt.show()
-![](https://reinholdm.github.io/MengLinghui.github.io//post-images/1585922055771.PNG)
-从结果可以看出PCA降到二维后基本混到一起来，很难进行区分。而t-SNE的效果非常的不错。</code></pre>
+</code></pre>
+<p><img src="https://reinholdm.github.io/MengLinghui.github.io//post-images/1585922055771.PNG" alt="visualization" loading="lazy"><br>
+从结果可以看出PCA降到二维后基本混到一起来，很难进行区分。而t-SNE的效果非常的不错。</p>
+<h2 id="reference">Reference</h2>
+<ol>
+<li><a href="https://github.com/oreillymedia/t-SNE-tutorial">An illustratated introduction to the t-SNE algorithm</a> 🌊</li>
+</ol>
 ]]></content>
     </entry>
     <entry>

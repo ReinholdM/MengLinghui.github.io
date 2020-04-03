@@ -8,7 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-<link rel="shortcut icon" href="https://reinholdm.github.io/MengLinghui.github.io//favicon.ico?v=1585922079993">
+<link rel="shortcut icon" href="https://reinholdm.github.io/MengLinghui.github.io//favicon.ico?v=1585922722693">
 <link rel="stylesheet" href="https://reinholdm.github.io/MengLinghui.github.io//styles/main.css">
 
 
@@ -35,7 +35,7 @@ t-SNE(t-distributed stochastic neighbor embedding)是用于降维的一种机器
   <div class="top-container" data-aos="fade-right">
     <div class="top-header-container">
       <a class="site-title-container" href="https://reinholdm.github.io/MengLinghui.github.io/">
-        <img src="https://reinholdm.github.io/MengLinghui.github.io//images/avatar.png?v=1585922079993" class="site-logo">
+        <img src="https://reinholdm.github.io/MengLinghui.github.io//images/avatar.png?v=1585922722693" class="site-logo">
         <h1 class="site-title">Linghui&#39;s blog</h1>
       </a>
       <div class="menu-btn" @click="menuVisible = !menuVisible">
@@ -133,8 +133,13 @@ plt.scatter(X_pca[:, 0], X_pca[:, 1], c=digits.target,label=&quot;PCA&quot;)
 plt.legend()
 plt.savefig('images/digits_tsne-pca.png', dpi=120)
 plt.show()
-![](https://reinholdm.github.io/MengLinghui.github.io//post-images/1585922055771.PNG)
-从结果可以看出PCA降到二维后基本混到一起来，很难进行区分。而t-SNE的效果非常的不错。</code></pre>
+</code></pre>
+<p><img src="https://reinholdm.github.io/MengLinghui.github.io//post-images/1585922055771.PNG" alt="visualization" loading="lazy"><br>
+从结果可以看出PCA降到二维后基本混到一起来，很难进行区分。而t-SNE的效果非常的不错。</p>
+<h2 id="reference">Reference</h2>
+<ol>
+<li><a href="https://github.com/oreillymedia/t-SNE-tutorial">An illustratated introduction to the t-SNE algorithm</a> 🌊</li>
+</ol>
 
             </div>
             
