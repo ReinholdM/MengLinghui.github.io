@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://reinholdm.github.io/MengLinghui.github.io/</id>
     <title>Linghui&apos;s blog</title>
-    <updated>2020-07-03T07:31:52.150Z</updated>
+    <updated>2020-07-03T08:24:12.499Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://reinholdm.github.io/MengLinghui.github.io/"/>
     <link rel="self" href="https://reinholdm.github.io/MengLinghui.github.io/atom.xml"/>
@@ -10,6 +10,65 @@
     <logo>https://reinholdm.github.io/MengLinghui.github.io/images/avatar.png</logo>
     <icon>https://reinholdm.github.io/MengLinghui.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Linghui&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[语音识别在线资源整理]]></title>
+        <id>https://reinholdm.github.io/MengLinghui.github.io/post/yu-yin-shi-bie-zai-xian-zi-yuan-zheng-li/</id>
+        <link href="https://reinholdm.github.io/MengLinghui.github.io/post/yu-yin-shi-bie-zai-xian-zi-yuan-zheng-li/">
+        </link>
+        <updated>2020-07-03T08:23:42.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="语音识别在线资源整理">语音识别在线资源整理</h2>
+<ol>
+<li>
+<p><a href="http://web.stanford.edu/~jurafsky/slp3/">斯坦福大学《语音与语言处理》第三版draft</a></p>
+<p><a href="http://web.stanford.edu/~jurafsky/slp3/ed3book.pdf">全文PDF</a></p>
+</li>
+<li>
+<p><a href="https://www.shenlanxueyuan.com/course/202?source=1">深蓝学院《语音识别：从入门到精通课程》</a></p>
+</li>
+<li>
+<p><a href="http://www.inf.ed.ac.uk/teaching/courses/asr/lectures-2019.html">爱丁堡大学语音处理课程</a></p>
+</li>
+<li>
+<p><a href="https://eleanorchodroff.com/tutorial/kaldi/index.html">Kaldi tutorial</a></p>
+</li>
+<li>
+<p><a href="https://montreal-forced-aligner.readthedocs.io/en/latest/installation.html">Montreal Forced Aligner</a>基于kaldi的强制对齐工具</p>
+</li>
+<li>
+<p><a href="https://ffmpeg.org/ffmpeg-filters.html#silenceremove">移除静音帧工具ffmpeg</a> 避免预料中一个sentence被分成几个utterance影响</p>
+</li>
+<li>
+<p><a href="https://github.com/ReinholdM/WaveRNN">VQ-VAE的codebase</a>语音上的无监督离散化工作和zero speech<a href="https://github.com/ReinholdM/WaveRNN">zero speech</a></p>
+</li>
+<li>
+<p><a href="https://github.com/eginhard/cae-utd-utils">评估声学embedding工具UTD</a>、<a href="https://github.com/bootphon/ABXpy">ABX</a></p>
+</li>
+<li>
+<p><a href="http://deeplearning.cs.cmu.edu/S20/index.html">CMU 11-785</a></p>
+</li>
+</ol>
+<hr>
+<p><strong>Questions needed to be more solid so far</strong> 2020.03.09</p>
+<ul>
+<li>GMM-HMM究竟怎么用在语音识别中的对齐部分，如何学习到边界，怎么确定三音子绑定状态下的决策树以及对应的问题集的设计问题？<strong>尤其注意流程、输入输出、训练摘要</strong> 参照</li>
+<li>WFST与HMM模型构建的声学模型的shallow fusion？</li>
+</ul>
+<h3 id="a-few-knowledge-in-speech">A few knowledge  in speech</h3>
+<ol>
+<li><a href="https://zhuanlan.zhihu.com/p/74696938">shallow fusion、deep fusion和code fusion的关系</a></li>
+<li><a href="file:///C:/Users/Reinhold/Zotero/storage/TMP6IR87/is2019_tutorial_T6_E2E.pdf">ESPnet tutorial</a> 和 <a href="https://github.com/espnet/espnet">Github ESPnet repository</a></li>
+</ol>
+<hr>
+<h3 id="asr-tricks">ASR tricks</h3>
+<ol>
+<li>L1 norm可以加速得到attention和减少noisy样本干扰</li>
+<li>tanh可以减少target range out的mismatch情况</li>
+<li>CNN网络相比attention based和LSTM based网络参数量较少</li>
+<li>End-to-End方法在low-resource场景下效果不如Hybrid系统</li>
+<li>CTC可以帮助修正attention based软对齐问题，并加速解码</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[文献阅读初探]]></title>
         <id>https://reinholdm.github.io/MengLinghui.github.io/post/wen-xian-yue-du-chu-tan/</id>

@@ -2,18 +2,32 @@
   <head>
     <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>ESPnet使用手册 | Linghui&#39;s blog</title>
+<title>语音识别在线资源整理 | Linghui&#39;s blog</title>
 <link rel="shortcut icon" href="https://reinholdm.github.io/MengLinghui.github.io//favicon.ico?v=1593764648848">
 <link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
 <link rel="stylesheet" href="https://reinholdm.github.io/MengLinghui.github.io//styles/main.css">
-<link rel="alternate" type="application/atom+xml" title="ESPnet使用手册 | Linghui&#39;s blog - Atom Feed" href="https://reinholdm.github.io/MengLinghui.github.io//atom.xml">
+<link rel="alternate" type="application/atom+xml" title="语音识别在线资源整理 | Linghui&#39;s blog - Atom Feed" href="https://reinholdm.github.io/MengLinghui.github.io//atom.xml">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
 
 
 
-    <meta name="description" content="
+    <meta name="description" content="语音识别在线资源整理
 
-..." />
+
+斯坦福大学《语音与语言处理》第三版draft
+全文PDF
+
+
+深蓝学院《语音识别：从入门到精通课程》
+
+
+爱丁堡大学语音处理课程
+
+
+Kaldi tutorial
+
+
+Montreal Forced Aligner..." />
     <meta name="keywords" content="" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
     <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
@@ -76,28 +90,87 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              ESPnet使用手册
+              语音识别在线资源整理
             </h2>
             <div class="post-info">
               <span>
-                2020-03-31
+                2020-07-03
               </span>
               <span>
-                0 min read
+                2 min read
               </span>
               
             </div>
             
-              <img class="post-feature-image" src="https://reinholdm.github.io/MengLinghui.github.io//post-images/espnet-shi-yong-shou-ce.png" alt="">
-            
             <div class="post-content-wrapper">
               <div class="post-content">
-                <p><img src="https://reinholdm.github.io/MengLinghui.github.io//post-images/1585626434367.PNG" alt="espnet1" loading="lazy"><br>
-<img src="https://reinholdm.github.io/MengLinghui.github.io//post-images/1585626439568.PNG" alt="espnet2" loading="lazy"></p>
+                <h2 id="语音识别在线资源整理">语音识别在线资源整理</h2>
+<ol>
+<li>
+<p><a href="http://web.stanford.edu/~jurafsky/slp3/">斯坦福大学《语音与语言处理》第三版draft</a></p>
+<p><a href="http://web.stanford.edu/~jurafsky/slp3/ed3book.pdf">全文PDF</a></p>
+</li>
+<li>
+<p><a href="https://www.shenlanxueyuan.com/course/202?source=1">深蓝学院《语音识别：从入门到精通课程》</a></p>
+</li>
+<li>
+<p><a href="http://www.inf.ed.ac.uk/teaching/courses/asr/lectures-2019.html">爱丁堡大学语音处理课程</a></p>
+</li>
+<li>
+<p><a href="https://eleanorchodroff.com/tutorial/kaldi/index.html">Kaldi tutorial</a></p>
+</li>
+<li>
+<p><a href="https://montreal-forced-aligner.readthedocs.io/en/latest/installation.html">Montreal Forced Aligner</a>基于kaldi的强制对齐工具</p>
+</li>
+<li>
+<p><a href="https://ffmpeg.org/ffmpeg-filters.html#silenceremove">移除静音帧工具ffmpeg</a> 避免预料中一个sentence被分成几个utterance影响</p>
+</li>
+<li>
+<p><a href="https://github.com/ReinholdM/WaveRNN">VQ-VAE的codebase</a>语音上的无监督离散化工作和zero speech<a href="https://github.com/ReinholdM/WaveRNN">zero speech</a></p>
+</li>
+<li>
+<p><a href="https://github.com/eginhard/cae-utd-utils">评估声学embedding工具UTD</a>、<a href="https://github.com/bootphon/ABXpy">ABX</a></p>
+</li>
+<li>
+<p><a href="http://deeplearning.cs.cmu.edu/S20/index.html">CMU 11-785</a></p>
+</li>
+</ol>
+<hr>
+<p><strong>Questions needed to be more solid so far</strong> 2020.03.09</p>
+<ul>
+<li>GMM-HMM究竟怎么用在语音识别中的对齐部分，如何学习到边界，怎么确定三音子绑定状态下的决策树以及对应的问题集的设计问题？<strong>尤其注意流程、输入输出、训练摘要</strong> 参照</li>
+<li>WFST与HMM模型构建的声学模型的shallow fusion？</li>
+</ul>
+<h3 id="a-few-knowledge-in-speech">A few knowledge  in speech</h3>
+<ol>
+<li><a href="https://zhuanlan.zhihu.com/p/74696938">shallow fusion、deep fusion和code fusion的关系</a></li>
+<li><a href="file:///C:/Users/Reinhold/Zotero/storage/TMP6IR87/is2019_tutorial_T6_E2E.pdf">ESPnet tutorial</a> 和 <a href="https://github.com/espnet/espnet">Github ESPnet repository</a></li>
+</ol>
+<hr>
+<h3 id="asr-tricks">ASR tricks</h3>
+<ol>
+<li>L1 norm可以加速得到attention和减少noisy样本干扰</li>
+<li>tanh可以减少target range out的mismatch情况</li>
+<li>CNN网络相比attention based和LSTM based网络参数量较少</li>
+<li>End-to-End方法在low-resource场景下效果不如Hybrid系统</li>
+<li>CTC可以帮助修正attention based软对齐问题，并加速解码</li>
+</ol>
 
               </div>
               <div class="toc-container">
-                
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#%E8%AF%AD%E9%9F%B3%E8%AF%86%E5%88%AB%E5%9C%A8%E7%BA%BF%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86">语音识别在线资源整理</a>
+<ul>
+<li><a href="#a-few-knowledge-in-speech">A few knowledge  in speech</a></li>
+<li><a href="#asr-tricks">ASR tricks</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
               </div>
             </div>
           </article>
@@ -106,9 +179,9 @@
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://reinholdm.github.io/MengLinghui.github.io/post/icassp-2020-papers-about-speech/">
+            <a href="https://reinholdm.github.io/MengLinghui.github.io/post/wen-xian-yue-du-chu-tan/">
               <h3 class="post-title">
-                ICASSP 2020 Papers about Speech
+                文献阅读初探
               </h3>
             </a>
           </div>
