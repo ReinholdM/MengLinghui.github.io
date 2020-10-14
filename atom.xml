@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://reinholdm.github.io/MengLinghui.github.io/</id>
     <title>Linghui&apos;s blog</title>
-    <updated>2020-10-14T07:06:53.765Z</updated>
+    <updated>2020-10-14T08:04:35.898Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://reinholdm.github.io/MengLinghui.github.io/"/>
     <link rel="self" href="https://reinholdm.github.io/MengLinghui.github.io/atom.xml"/>
@@ -10,6 +10,59 @@
     <logo>https://reinholdm.github.io/MengLinghui.github.io/images/avatar.png</logo>
     <icon>https://reinholdm.github.io/MengLinghui.github.io/favicon.ico</icon>
     <rights>All rights reserved 2020, Linghui&apos;s blog</rights>
+    <entry>
+        <title type="html"><![CDATA[RL 在线资源整理]]></title>
+        <id>https://reinholdm.github.io/MengLinghui.github.io/post/rl-zai-xian-zi-yuan-zheng-li/</id>
+        <link href="https://reinholdm.github.io/MengLinghui.github.io/post/rl-zai-xian-zi-yuan-zheng-li/">
+        </link>
+        <updated>2020-10-14T08:03:49.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="强化学习在线资源整理">强化学习在线资源整理</h2>
+<ol>
+<li><a href="https://spinningup.openai.com/en/latest/user/introduction.html">DeepMind Spinning Up简单推导和上手实践</a></li>
+<li><a href="http://rail.eecs.berkeley.edu/deeprlcourse/">Berkeley CS285强化学习课程，主要为PG流派</a></li>
+<li><a href="https://www.bilibili.com/video/BV1UE411G78S?from=search&amp;seid=16117524858078235289">李宏毅老师RL课程，逻辑清晰比较简单</a></li>
+<li><a href="https://github.com/oxwhirl/pymarl">Multi-agent RL实现框架pymarl，包括CDTE方法下的QMIX、COMA实现</a></li>
+</ol>
+<h3 id="open-source-implementation">Open source implementation</h3>
+<ol>
+<li><a href="https://github.com/alex-petrenko/sample-factory">超越IMPALA和SEED RL的强化学习加速框架</a></li>
+<li><a href="https://github.com/Sheepsody/Batched-Impala-PyTorch">IMPALA的pytorch实现</a></li>
+<li>DRL框架<a href="https://github.com/rlworkgroup/garage">GARAGE</a>、<a href="https://docs.ray.io/en/master/rllib.html">RLlib</a>、<a href="https://github.com/catalyst-team/catalyst-rl">Catalyst</a>、<a href="https://github.com/astooke/rlpyt">rlpyt</a></li>
+<li><a href="https://github.com/oxwhirl/smac">SMAC</a> SMAC - StarCraft Multi-Agent Challenge</li>
+<li>Fully Cooperative Multiagent Object Transporation Problems (<strong>CMOTPs</strong>)<br>
+The Apprentice Firemen Game<br>
+<strong>Pommerman</strong><br>
+<strong>Starcraft Multiagent Challenge</strong><br>
+The Multi-Agent Reinforcement Learning in Malmo (MARLO)<br>
+Hanabi is a cooperative multiplayer card game (two to  five players)<br>
+Arena<br>
+<strong>MuJoCo</strong> Multiagent Soccer<br>
+Neural MMO</li>
+</ol>
+<h3 id="game-theory-mechanism-expriments">Game Theory mechanism expriments</h3>
+<ol>
+<li>Keynes Beauty Contest</li>
+<li>Auction</li>
+<li>Stone Scissors</li>
+<li>Star Craft II</li>
+<li>two didactic</li>
+</ol>
+<h3 id="可follow的组研究人员">可follow的组/研究人员</h3>
+<p>Anuj Mahajan   --     OATML</p>
+<p>Chongjie Zhang  -- Tsinghua University</p>
+<hr>
+<h3 id="rl目前存在的挑战">RL目前存在的挑战</h3>
+<ol>
+<li><strong>scalability</strong>: 可扩展性<strong>CTDE</strong>（Centralized Training and Decentralized Execuation）</li>
+<li><strong>Credit Assignment</strong>：each agent's contribution to the team</li>
+<li><strong>uncertainty</strong> （non-stationary）: ​p​a​r​t​i​al​ ​a​nd​ ​n​oi​s​y​ ​o​b​s​e​r​v​a​ti​on🌊通过<strong>communication</strong>解决来自环境的不确定性，多智能体会相互影响</li>
+<li><strong>Heterogeneity</strong>：异构性 requiring diverse behaviors of agents  /role-based</li>
+<li><strong>Hierarchical</strong>：层次化Agent，多级agent面对的模型</li>
+<li><strong>Coordination</strong>: 协调</li>
+<li><strong>Generality</strong>：RL的泛化性，off-policy和在推理时数据不同</li>
+</ol>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[语音识别在线资源整理]]></title>
         <id>https://reinholdm.github.io/MengLinghui.github.io/post/yu-yin-shi-bie-zai-xian-zi-yuan-zheng-li/</id>
